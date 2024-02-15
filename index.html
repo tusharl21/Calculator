@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .mdiv{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(https://static.wixstatic.com/media/c566da_912db225572946cbba6a31f8cbc91b59~mv2.gif);  
+            background-repeat: no-repeat;
+            background-size: cover;     
+/*"https://asset.msi.com/resize/picture/global/wallpaper/QD-OLED-3440x1440_MPG.jpg/550.png"
+*/        }
+        .container{
+            width: 250px;
+            height: 380px;
+            border: 5px solid;
+             /*background-image: linear-gradient(to right,rgb(151, 197, 250),rgb(209, 143, 248));*/ 
+            background-image: url(https://images.squarespace-cdn.com/content/v1/54b870c1e4b0a17414b56dfd/1451878246417-ZTPZGLG9B3W3Q1JHY01W/Flat+Nine+Gear+GIF);
+            background-size: cover;
+        }
+        input{
+            height: 48px;
+            width: 40px;
+            margin: 4px;
+            border: none;
+            border-radius: 10%;
+            background-color: rgb(15, 10, 10);
+            color: white ;
+            font-family: Arial Black;
+            font-size: 15px;
+
+        }
+        .eq{
+            width: 89px;
+            margin-left: 10px;
+            background-color: rgb(248, 114, 25);
+        }
+        .op{
+            background-color: solid black;
+            border: 5px solid rgb(250, 138, 33);
+            outline: none;
+            box-shadow: 0px 0px 2px grey;
+            width: 90%;
+            text-align: right;
+        }
+        .opr{
+            background-color: rgb(247, 123, 8);
+        }
+    </style>
+</head>
+<body>
+    <div class="mdiv">
+        <div class="container" align="center">
+            <form action="">
+            <div>
+                <input type="text" name="op" disabled class="op">
+            </div>
+            <div>
+                <input type="button" name="clr" value="C" onclick="op.value+=' ' ">
+                <input type="button" name="alr" value="AC" onclick="op.value= ' '" >
+                <input type="button" name="div" value="/" onclick="op.value+='/' " class="opr">
+                <input type="button" name="mod" value="%" onclick="op.value+='%' " class="opr">
+
+            </div>
+            <div>
+                <input type="button" name="num" value="9" onclick="op.value+='9' ">
+                <input type="button" name="num" value="8" onclick="op.value+='8' ">
+                <input type="button" name="num" value="7" onclick="op.value+='7' ">
+                <input type="button" name="add" value="+" onclick="op.value+='+' "  class="opr">
+
+            </div>
+            <div>
+                <input type="button" name="num" value="6" onclick="op.value+='6' ">
+                <input type="button" name="num" value="5" onclick="op.value+='5' ">
+                <input type="button" name="num" value="4" onclick="op.value+='4' ">
+                <input type="button" name="sub" value="-" onclick="op.value+='-' " class="opr">
+
+            </div>
+            <div>
+                <input type="button" name="num" value="3" onclick="op.value+='3' ">
+                <input type="button" name="num" value="2" onclick="op.value+='2' ">
+                <input type="button" name="num" value="1" onclick="op.value+='1' ">
+                <input type="button" name="mul" value="×" onclick="op.value+='*' " class="opr">
+
+            </div>
+            <div>
+                <input type="button" name="num" value="0" onclick="op.value+='0' ">
+                <input type="button" name="point" value="." onclick="op.value+='.' ">
+                <input type="button" name="equal" class="eq" value="=" onclick="op.value=eval(op.value)"  >
+                <!-- <input type="button" name="mod" value="%" onclick="op.value='' "> -->
+
+            </div>
+        </form>
+           
+           
+        </div>
+    </div>
+    
+</body>
+</html>
